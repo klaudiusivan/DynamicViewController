@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BbM-X8-DRK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Parent View Controller-->
+        <scene sceneID="5oe-wg-fCl">
+            <objects>
+                <viewController id="BbM-X8-DRK" customClass="ParentViewController" customModule="DynamicViewContainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1H3-0o-iXb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="366" placeholderIntrinsicHeight="710" translatesAutoresizingMaskIntoConstraints="NO" id="dkL-tB-ZrZ">
+                                <rect key="frame" x="24" y="122" width="366" height="710"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1y-ki-StZ">
+                                <rect key="frame" x="20" y="84" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="BbM-X8-DRK" eventType="touchUpInside" id="YHm-D0-0Bx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dkL-tB-ZrZ" firstAttribute="leading" secondItem="Ljs-3D-uhP" secondAttribute="leading" constant="24" id="3Ie-cy-d0k"/>
+                            <constraint firstItem="Ljs-3D-uhP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dkL-tB-ZrZ" secondAttribute="bottom" constant="30" id="OAq-1S-TGy"/>
+                            <constraint firstItem="r1y-ki-StZ" firstAttribute="leading" secondItem="Ljs-3D-uhP" secondAttribute="leading" constant="20" id="QKm-dY-EDS"/>
+                            <constraint firstItem="dkL-tB-ZrZ" firstAttribute="centerX" secondItem="Ljs-3D-uhP" secondAttribute="centerX" id="YkR-gs-fFn"/>
+                            <constraint firstItem="dkL-tB-ZrZ" firstAttribute="top" secondItem="r1y-ki-StZ" secondAttribute="bottom" constant="8" id="iYu-Ye-ISH"/>
+                            <constraint firstItem="Ljs-3D-uhP" firstAttribute="trailing" secondItem="dkL-tB-ZrZ" secondAttribute="trailing" constant="24" id="l8z-bR-2ep"/>
+                            <constraint firstItem="r1y-ki-StZ" firstAttribute="top" secondItem="Ljs-3D-uhP" secondAttribute="top" constant="40" id="yi8-gg-gMW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ljs-3D-uhP"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="r1y-ki-StZ" id="g7R-ZP-4A1"/>
+                        <outlet property="containerView" destination="dkL-tB-ZrZ" id="lkD-lx-SGy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eh4-S4-k0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="267" y="133"/>
+        </scene>
+    </scenes>
+</document>

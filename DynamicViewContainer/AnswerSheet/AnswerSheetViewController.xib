@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerSheetViewController" customModule="DynamicViewContainer" customModuleProvider="target">
+            <connections>
+                <outlet property="answerField" destination="gKc-NJ-ape" id="itN-M9-5AG"/>
+                <outlet property="hideMeButton" destination="IqK-u9-Abj" id="Wqb-NL-sYY"/>
+                <outlet property="questionLabel" destination="eYl-CP-MYd" id="kfJ-K4-ZQg"/>
+                <outlet property="showButton" destination="0ZY-lH-PrR" id="MTP-Uy-1tu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="418"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-CP-MYd">
+                    <rect key="frame" x="112.5" y="120.5" width="42" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="HQe-G1-k2c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-NJ-ape">
+                    <rect key="frame" x="103.5" y="205.5" width="60" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="5Kl-4I-NMM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="didAnswer:" destination="-1" eventType="editingDidEnd" id="5qU-U9-nPF"/>
+                        <outlet property="delegate" destination="-1" id="Eny-N5-Y2F"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp4-T2-OPH">
+                    <rect key="frame" x="99" y="60" width="69" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="uvi-gC-1a9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Your Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3P-lR-vuV">
+                    <rect key="frame" x="64.5" y="177" width="138" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="dq3-Pm-lUb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Return To Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGN-CX-yee">
+                    <rect key="frame" x="36.5" y="370.5" width="194" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="IC5-vn-F4i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-PI-0jM">
+                    <rect key="frame" x="114.5" y="282" width="38" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZY-lH-PrR">
+                            <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                            <color key="backgroundColor" red="0.95686274510000002" green="0.27500241990000002" blue="0.50938051939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Show">
+                                <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </state>
+                            <connections>
+                                <action selector="showButtonPressed:" destination="-1" eventType="touchUpInside" id="gfR-IP-MQn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqK-u9-Abj">
+                            <rect key="frame" x="0.0" y="30" width="38" height="30"/>
+                            <color key="backgroundColor" red="0.95686274510000002" green="0.27500241990000002" blue="0.50938051939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Hide">
+                                <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </state>
+                            <connections>
+                                <action selector="hideButtonPressewd:" destination="-1" eventType="touchUpInside" id="7bt-Bi-ivs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="eYl-CP-MYd" firstAttribute="centerX" secondItem="sp4-T2-OPH" secondAttribute="centerX" id="0qN-EE-Msz"/>
+                <constraint firstItem="FGN-CX-yee" firstAttribute="top" secondItem="2YQ-PI-0jM" secondAttribute="bottom" constant="28.5" id="4vb-MA-WvD"/>
+                <constraint firstItem="sp4-T2-OPH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8IW-Cu-rbs"/>
+                <constraint firstItem="gKc-NJ-ape" firstAttribute="top" secondItem="T3P-lR-vuV" secondAttribute="bottom" constant="8" id="Eeh-8w-MQW"/>
+                <constraint firstItem="eYl-CP-MYd" firstAttribute="top" secondItem="sp4-T2-OPH" secondAttribute="bottom" constant="40" id="PfF-CA-jc2"/>
+                <constraint firstItem="T3P-lR-vuV" firstAttribute="top" secondItem="eYl-CP-MYd" secondAttribute="bottom" constant="36" id="R9F-bp-mjQ"/>
+                <constraint firstItem="FGN-CX-yee" firstAttribute="centerX" secondItem="gKc-NJ-ape" secondAttribute="centerX" id="Uzb-Z3-5Yg"/>
+                <constraint firstItem="2YQ-PI-0jM" firstAttribute="centerX" secondItem="gKc-NJ-ape" secondAttribute="centerX" id="Vxz-Pr-n1I"/>
+                <constraint firstItem="gKc-NJ-ape" firstAttribute="centerX" secondItem="T3P-lR-vuV" secondAttribute="centerX" id="dSH-aY-Fz3"/>
+                <constraint firstItem="sp4-T2-OPH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="fnk-Q7-nT3"/>
+                <constraint firstItem="2YQ-PI-0jM" firstAttribute="top" secondItem="gKc-NJ-ape" secondAttribute="bottom" constant="42.5" id="ik2-Kd-yRL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FGN-CX-yee" secondAttribute="bottom" constant="27" id="o7Q-Ni-kgX"/>
+                <constraint firstItem="T3P-lR-vuV" firstAttribute="centerX" secondItem="eYl-CP-MYd" secondAttribute="centerX" id="uP2-bi-gTJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-19.565217391304348" y="293.97321428571428"/>
+        </view>
+    </objects>
+</document>
